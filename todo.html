@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style-todo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>ACADEMY OF DIGITL INDUSTRIES</title>
+</head>
+<nav class="main-nav">
+    <span class="left-nav">
+        <a href="#" onclick="openSideMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#BCBCCB">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </a>
+    </span>
+    <ul>
+        <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#BCBCCB"><g><rect fill="none" height="24" width="24"/></g>
+                <g><path d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M19.46,9.12l-2.78,1.15 c-0.51-1.36-1.58-2.44-2.95-2.94l1.15-2.78C16.98,5.35,18.65,7.02,19.46,9.12z M12,15c-1.66,0-3-1.34-3-3s1.34-3,3-3s3,1.34,3,3 S13.66,15,12,15z M9.13,4.54l1.17,2.78c-1.38,0.5-2.47,1.59-2.98,2.97L4.54,9.13C5.35,7.02,7.02,5.35,9.13,4.54z M4.54,14.87 l2.78-1.15c0.51,1.38,1.59,2.46,2.97,2.96l-1.17,2.78C7.02,18.65,5.35,16.98,4.54,14.87z M14.88,19.46l-1.15-2.78 c1.37-0.51,2.45-1.59,2.95-2.97l2.78,1.17C18.65,16.98,16.98,18.65,14.88,19.46z"/></g></svg></a>
+        </li>
+        <li>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#BCBCCB"><path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg></a>
+        </li>
+        <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#BCBCCB">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg></a>
+        </li>
+        <span class="userAcc">
+        <li>
+            <p class="userName">Dante Alighieri</p>
+        </li>
+        <li>
+            <a href="#" onclick="navOpen()"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#BCBCCB"><
+                path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg></a>
+        </li>
+        <li>
+            <img src="./icon/Dante-a-Villa-De-Cerchi.jpg" alt="">
+        </li>
+        </span>
+    </ul>
+</nav>
+<div id="slideMenu">
+    <a class="btn-close" onclick="closeSideMenu()"> </a>
+    <a><img src="./icon/logo.png" alt=""></a>
+    <a id="dashBtn" class="active" onclick="dashOpen()"> <span class="side-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#A3A0FB"><path d="M0 0h24v24H0z" fill="none"/><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></span> Dashboard</a>
+    <a id="todoBtn" onclick="todoOpen()"> <span class="side-icon"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#A3A0FB"><rect fill="none" height="24" width="24"/><path d="M22,7h-9v2h9V7z M22,15h-9v2h9V15z M5.54,11L2,7.46l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,11z M5.54,19L2,15.46 l1.41-1.41l2.12,2.12l4.24-4.24l1.41,1.41L5.54,19z"/></svg></span>        Todo List</a>
+</div>
+<div id="logoutBtn">
+    <a href="#">Status : Online</a>
+    <a href="#">Account setting</a>
+    <a href="#">Feedback</a>
+    <a href="index.html">Logout</a>
+</div>
+
+<body>
+    <main id="main" onclick="navClose()" class="pages">
+        <section class="dashboard is-active" id="sec1">
+            <h1>Overview</h1>
+            <div class="charts">
+                <div class="chart">
+
+                    <canvas id="myChart" width="500" height="500"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="myChart1" width="500" height="500"></canvas>
+                </div>
+                <div class="chart">
+                    <canvas id="myChart3" width="500" height="500"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="sec2">
+            <h1>Todo List</h1>
+            <div class="todoCont">
+                <div class="header">
+                    <h3>All todo</h3>
+                    <button onclick="addTodo()">Add Todo</button>
+                </div>
+                <div class="todoList">
+                    <div class="titles">
+                        <p>Task name</p>
+                        <p>Is complated</p>
+                        <p>Created By</p>
+                        <p>ID</p>
+                        <p>Actions</p>
+                    </div>
+                    <div id="todos" class="pages" onclick="closeTodo()">
+                        <div id="page1" class="page pageOn" data-page="1"></div>
+                        <div id="page2" class="page" data-page="2"></div>
+                        <div id="page3" class="page" data-page="3"></div>
+                        <div id="page4" class="page" data-page="4"></div>
+                        <div id="page5" class="page" data-page="5"></div>
+                        <div id="page6" class="page" data-page="6"></div>
+                        <div id="page7" class="page" data-page="7"></div>
+                        <div id="page8" class="page" data-page="8"></div>
+                        <div id="page9" class="page" data-page="9"></div>
+                        <div id="page10" class="page" data-page="10"></div>
+
+                    </div>
+                    <ul class="tabs">
+                        <li class="tab on">
+                            <a data-tab="1" data-switcher>1</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="2" data-switcher>2</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="3" data-switcher> 3</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="4" data-switcher>4</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="5" data-switcher>5</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="6" data-switcher>6</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="7" data-switcher>7</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="8" data-switcher>8</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="9" data-switcher>9</a>
+                        </li>
+                        <li class="tab">
+                            <a data-tab="10" data-switcher>10</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+</body>
+<script src="./todo.js"></script>
+
+</html>

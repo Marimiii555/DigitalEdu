@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>ACADEMY OF DIGITL INDUSTRIES</title>
+</head>
+
+<body>
+    <main>
+        <div class="cont">
+            <div class="signin">
+                <form name="form1" onsubmit="return validate()" action="todo.html">
+                    <h1>ACADEMY OF DIGITL INDUSTRIES</h1>
+                    <p>Welcome back! Please login to your account.</p>
+                    <input type="text" name="username" placeholder="Username" id="username" class="username">
+                    <span id="errorMail">Username is required</span>
+                    <input type="password" name="password" placeholder="password" id="password" class="password">
+                    <span id="errorPass">password must be at last 8 characters</span>
+                    <div>
+                        <div>
+                            <input type="checkbox" name="remember" id="remember">
+                            <label for="remember">Remeber me</label>
+                        </div>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                    <div>
+                        <button type="submit" id="login">Login</button>
+                        <button type="button" id="signUpPage">Sign up</button>
+                    </div>
+                    <a class="term">Term of use. Privacy policy</a>
+                </form>
+            </div>
+
+
+
+
+
+
+            <div class="signup">
+                <form action="todo.html" onsubmit="return validate2()">
+                    <h1>ACADEMY OF DIGITL INDUSTRIES</h1>
+                    <p class="p1">Please complete to create your account.</p>
+                    <div>
+                        <input type="text" placeholder="First name" id="firsName" required>
+                        <input type="text" placeholder="Last name" id="lastName" required>
+                    </div>
+                    <input type="text" placeholder="Username" required id="uName">
+                    <input type="mail" placeholder="Email" id="signUpMail" required>
+                    <input type="password" placeholder="Password" id="signUpPass">
+                    <input type="password" placeholder="Confirm Password" id="confPass">
+                    <div>
+                        <label>
+                        <input type="checkbox" name="agree-terms" id="agree-terms">
+                         I agree with terms and conditions
+                    </label>
+                    </div>
+                    <button type="submit" id="signUp">Sign up</button>
+                    <p id="signinTrget">Already have an account? Sign in.</p>
+                    <p class="term">Term of use. Privacy policy</p>
+                    <span class="signUpPassErr"> password must be at last 8 characters</span>
+                    <span class="passchek">password must be same!</span>
+                </form>
+            </div>
+    </main>
+</body>
+<script src="./index.js"></script>
+
+</html>

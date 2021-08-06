@@ -1,0 +1,236 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Source Sans Pro', sans-serif;
+            }
+            
+            main {
+                background: #43425D;
+                width: 100%;
+                height: 100vh;
+            }
+            
+            .cont {
+                position: absolute;
+                background: white;
+                width: 50%;
+                height: 100vh;
+                right: 0;
+            }
+            
+            .signin {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            .signin h1 {
+                letter-spacing: 7px;
+                width: 250px;
+                text-align: center;
+                font-weight: bolder;
+                position: absolute;
+                top: 120px;
+            }
+            
+            .signin p {
+                color: rgba(0, 0, 0, 0.6);
+                padding-top: 30px;
+            }
+            
+            .username {
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+            
+            .password {
+                margin-bottom: 30px;
+            }
+            
+            .username,
+            .password {
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+                width: 400px;
+                height: 30px;
+            }
+            
+            .signin a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            form :nth-child(7) {
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+            }
+            
+            #errorPass {
+                font-size: smaller;
+                padding-top: 75px;
+                left: 140px;
+                color: #FF6565;
+                position: absolute;
+                display: none;
+            }
+            
+            #errorMail {
+                left: 140px;
+                font-size: smaller;
+                padding-bottom: 50px;
+                color: #FF6565;
+                position: absolute;
+                display: none;
+            }
+            
+            form :nth-child(8) {
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+                height: 40px;
+                margin-top: 30px;
+            }
+            
+            form button {
+                width: 185px;
+                border-radius: 4px;
+                transition: all 200ms ease-in-out;
+            }
+            
+            form button:hover {
+                transform: scale(1.2);
+            }
+            
+            .signin button:first-child {
+                background: #43425D;
+                color: white;
+            }
+            
+            .signin button:last-child {
+                border: 1px solid #43425D;
+                background: transparent;
+            }
+            
+            .term {
+                bottom: 20px;
+                position: absolute;
+                cursor: pointer;
+            }
+            
+            input:focus {
+                border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+                outline: none;
+            }
+            /* signup */
+            
+            .signup {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                position: relative;
+                display: none;
+            }
+            
+            .signup h1 {
+                letter-spacing: 7px;
+                width: 250px;
+                text-align: center;
+                font-weight: bolder;
+                position: absolute;
+                top: 35px;
+            }
+            
+            .p1 {
+                position: absolute;
+                top: 180px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+            
+            .signup input {
+                border: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+                width: 400px;
+                height: 20px;
+                margin: 20px;
+            }
+            
+            .signup :nth-child(3) {
+                margin-top: 50px;
+            }
+            
+            .signup :nth-child(3) input {
+                width: 200px;
+                margin: 0;
+                height: 20px;
+            }
+            
+            .signup :nth-child(8) {
+                width: 400px;
+                margin: 0;
+                height: 50px;
+                font-size: small;
+            }
+            
+            .signup :nth-child(8) input {
+                width: 20px;
+                height: 20px;
+                border: 1px solid #808495;
+            }
+            
+            #signinTrget {
+                position: absolute;
+                cursor: pointer;
+                bottom: 100px;
+                border-bottom: 1px solid #000;
+            }
+            
+            .signup button {
+                width: 185px;
+                height: 50px;
+                background: #43425D 0% 0% no-repeat padding-box;
+                color: white;
+                border: 1px solid #43425D;
+                border-radius: 4px;
+                font-weight: bolder;
+                margin-top: 50px;
+                transition: all 200ms ease-in-out;
+            }
+            
+            .signup button:hover {
+                transform: scale(1.2);
+            }
+            
+            .passchek {
+                color: red;
+                position: absolute;
+                left: 140px;
+                margin-top: 160px;
+                font-size: smaller;
+                display: none;
+            }
+            
+            .signUpPassErr {
+                color: red;
+                position: absolute;
+                left: 140px;
+                top: 405px;
+                font-size: smaller;
+                display: none;
+            }
